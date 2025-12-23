@@ -9,10 +9,10 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/hariharan-r06', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/hariharan-r', label: 'LinkedIn' },
-  { icon: Code2, href: 'https://leetcode.com/hariharan-r', label: 'LeetCode' },
-  { icon: Trophy, href: 'https://hackerrank.com/hariharan-r', label: 'HackerRank' },
+  { icon: Github, href: 'https://github.com/hariharan-r06/hariharan-r06', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/hariharan-r06', label: 'LinkedIn' },
+  { icon: Code2, href: 'https://leetcode.com/u/hariharan-r06/', label: 'LeetCode' },
+  { icon: Trophy, href: 'https://www.hackerrank.com/profile/hari_2305032', label: 'HackerRank' },
 ];
 
 const Contact = () => {
