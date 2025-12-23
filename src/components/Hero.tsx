@@ -47,7 +47,7 @@ const Hero = () => {
               </button>
               
               <a
-                href="#"
+                href="https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Hariharan%20R_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline flex items-center gap-2"
