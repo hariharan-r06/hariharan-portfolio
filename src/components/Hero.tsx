@@ -83,8 +83,8 @@ const Hero = () => {
                   ) : (
                     <span className="text-6xl sm:text-7xl md:text-8xl font-bold gradient-text">HR</span>
                   )}
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>

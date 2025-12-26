@@ -4,7 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
   { icon: MapPin, label: 'Location', value: 'Coimbatore, India' },
-  { icon: Mail, label: 'Email', value: 'harihari91408@gmail.com', href: 'mailto:harihari91408@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'hariharan.rwork@gmail.com', href: 'mailto:hariharan.rwork@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+91 9786929369', href: 'tel:+919786929369' },
 ];
 
@@ -15,10 +15,20 @@ const socialLinks = [
   { icon: Trophy, href: 'https://www.hackerrank.com/profile/hari_2305032', label: 'HackerRank' },
 ];
 
+// Declare emailjs type for TypeScript
+declare global {
+  interface Window {
+    emailjs: {
+      send: (serviceId: string, templateId: string, templateParams: Record<string, unknown>, options?: Record<string, unknown>) => Promise<{ status: number; text: string }>;
+    };
+  }
+}
+
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -38,20 +48,50 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:harihari91408@gmail.com?subject=${subject}&body=${body}`;
-    
-    toast({
-      title: "Opening email client...",
-      description: "Your message is ready to send!",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
+    if (!window.emailjs) {
+      toast({
+        title: "Error",
+        description: "Email service is not available. Please try again later.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      subject: `Portfolio Contact from ${formData.name}`,
+    };
+
+    try {
+      await window.emailjs.send(
+        'service_i91lwou',
+        'template_gpk36qo',
+        templateParams
+      );
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Failed to Send",
+        description: "Something went wrong. Please try again later or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -168,9 +208,12 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="btn-primary w-full flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="relative z-10">Send Message</span>
+                <span className="relative z-10">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </span>
                 <Send size={18} className="relative z-10" />
               </button>
             </form>
