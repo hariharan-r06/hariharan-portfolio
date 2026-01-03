@@ -28,6 +28,8 @@ import {
   SiFirebase,
   SiEclipseide,
   SiPostman,
+  SiVsco,
+  SiIntellijidea,
 } from "react-icons/si";
 
 const skillCategories = [
@@ -71,9 +73,13 @@ const skillCategories = [
     skills: [
       { name: 'Git & GitHub', icon: FaGithub },
       { name: 'Docker', icon: FaDocker },
-      { name: 'Firebase', icon: SiFirebase },
-      { name: 'Eclipse IDE', icon: SiEclipseide },
       { name: 'Postman', icon: SiPostman },
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'VS Code', icon: SiVsco },
+      { name: 'Eclipse IDE', icon: SiEclipseide },
+      { name: 'JDK', icon: FaJava },
+      { name: 'IntelliJ IDEA', icon: SiIntellijidea },
+    
     ],
   },
 ];
