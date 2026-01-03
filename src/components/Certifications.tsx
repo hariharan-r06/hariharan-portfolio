@@ -44,8 +44,15 @@ const certifications = [
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Certificate.pdf',
     color: 'from-purple-500 to-violet-600',
     logo: '/best-coding-platforms.jpeg',
+  },
+  {
+    institution: 'Postman',
+    title: 'Postman API Fundamentals – Student Expert',
+    description: 'Hands-on certification demonstrating proficiency in API concepts and practical API consumption using Postman, including request methods, parameters, authentication, and basic scripting.',
+    certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Postman%20API%20Fundamentals%20student%20expert%20certificate.pdf',
+    color: 'from-orange-500 to-orange-600',
+    logo: '/image.png',
   }
-  
 ];
 
 const Certifications = () => {
