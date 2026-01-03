@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MapPin, Mail, Phone, Send, Github, Linkedin, Code2, Trophy } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   { icon: MapPin, label: 'Location', value: 'Coimbatore, India' },
@@ -14,15 +15,6 @@ const socialLinks = [
   { icon: Code2, href: 'https://leetcode.com/u/hariharan-r06/', label: 'LeetCode' },
   { icon: Trophy, href: 'https://www.hackerrank.com/profile/hari_2305032', label: 'HackerRank' },
 ];
-
-// Declare emailjs type for TypeScript
-declare global {
-  interface Window {
-    emailjs: {
-      send: (serviceId: string, templateId: string, templateParams: Record<string, unknown>, options?: Record<string, unknown>) => Promise<{ status: number; text: string }>;
-    };
-  }
-}
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -51,10 +43,13 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!window.emailjs) {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+    if (!serviceId || !templateId) {
       toast({
-        title: "Error",
-        description: "Email service is not available. Please try again later.",
+        title: "Configuration Error",
+        description: "Email service is not properly configured. Please contact the administrator.",
         variant: "destructive",
       });
       return;
@@ -70,9 +65,9 @@ const Contact = () => {
     };
 
     try {
-      await window.emailjs.send(
-        'service_i91lwou',
-        'template_gpk36qo',
+      await emailjs.send(
+        serviceId,
+        templateId,
         templateParams
       );
 
@@ -83,7 +78,6 @@ const Contact = () => {
 
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error('EmailJS error:', error);
       toast({
         title: "Failed to Send",
         description: "Something went wrong. Please try again later or contact me directly.",

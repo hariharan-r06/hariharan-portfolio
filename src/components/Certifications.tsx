@@ -26,9 +26,7 @@ const certifications = [
       "https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/SNOWPRO%20ASSOCIATE%20Certificate.pdf",
     color: "from-sky-300 to-blue-500",
     logo: "/snowflake-logo.png"
-  }
-  
-  ,
+  },
   {
     institution: 'Infosys Springboard',
     title: 'Digital Skills and Technology Training',

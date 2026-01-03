@@ -3,13 +3,7 @@ import {
   Code2, 
   Database, 
   Globe, 
-  Server, 
-  GitBranch, 
-  Cloud,
-  Boxes,
-  Container,
-  Workflow,
-  Flame
+  Server
 } from 'lucide-react';
 import {
   FaJava,
