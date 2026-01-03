@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Award } from 'lucide-react';
 
 const certifications = [
+
   {
     institution: 'MongoDB',
     title: 'MongoDB Basics for Students',
@@ -9,7 +10,8 @@ const certifications = [
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/mongodb.pdf',
     color: 'from-green-500 to-emerald-600',
     logo: '/mongodb-atlas-google-cloud-partnership-nosql-databases-integrations-2 (1).jpg',
-  },{
+  },
+  {
     institution: "Snowflake",
     title: "Snowflake Associate Certificate",
     description: "Foundational certification on the Snowflake platform and cloud data concepts.",
@@ -26,7 +28,6 @@ const certifications = [
     color: 'from-blue-500 to-cyan-600',
     logo: '/Celonis.png',
   },
-  ,
   {
     institution: 'Postman',
     title: 'Postman API Fundamentals – Student Expert',
@@ -52,7 +53,15 @@ const certifications = [
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Certificate.pdf',
     color: 'from-purple-500 to-violet-600',
     logo: '/best-coding-platforms.jpeg',
-  }
+  },
+  {
+    institution: 'All Certificates',
+    title: 'Overall Certificates Collection',
+    description: 'Complete collection of all certifications including DevOps, AWS, Docker, Ansible, Jenkins, Microsoft Learn, Android, Java, Python, SQL, Cybersecurity, and more.',
+    certificateUrl: 'https://drive.google.com/drive/folders/16Bjp54039hBepoG1CvmkXDgOuK06f80m',
+    color: 'from-indigo-500 to-purple-600',
+    logo: '/achievement-certificates-in-a-frame-with-star-and-ribbon-cartoon-61218.jpg',
+  },
 ];
 
 const Certifications = () => {
