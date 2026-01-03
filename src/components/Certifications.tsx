@@ -38,7 +38,7 @@ const certifications = [
   {
     institution: 'Infosys Springboard',
     title: 'Digital Skills and Technology Training',
-    description: 'Comprehensive program covering modern software development practices and technologies.',
+    description: 'Java Programming , Networking and Web Technology , Android Developer Course , etc.',
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Infosys%20springboard.pdf',
     color: 'from-orange-500 to-amber-600',
     logo: '/infosys.jpg',
