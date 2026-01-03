@@ -9,6 +9,14 @@ const certifications = [
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/mongodb.pdf',
     color: 'from-green-500 to-emerald-600',
     logo: '/mongodb-atlas-google-cloud-partnership-nosql-databases-integrations-2 (1).jpg',
+  },{
+    institution: "Snowflake",
+    title: "Snowflake Associate Certificate",
+    description: "Foundational certification on the Snowflake platform and cloud data concepts.",
+    certificateUrl:
+      "https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/SNOWPRO%20ASSOCIATE%20Certificate.pdf",
+    color: "from-sky-300 to-blue-500",
+    logo: "/snowflake-logo.png"
   },
   {
     institution: 'Celonis',
@@ -18,14 +26,14 @@ const certifications = [
     color: 'from-blue-500 to-cyan-600',
     logo: '/Celonis.png',
   },
+  ,
   {
-    institution: "Snowflake",
-    title: "Snowflake Associate Certificate",
-    description: "Foundational certification on the Snowflake platform and cloud data concepts.",
-    certificateUrl:
-      "https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/SNOWPRO%20ASSOCIATE%20Certificate.pdf",
-    color: "from-sky-300 to-blue-500",
-    logo: "/snowflake-logo.png"
+    institution: 'Postman',
+    title: 'Postman API Fundamentals – Student Expert',
+    description: 'Hands-on certification demonstrating proficiency in API concepts and practical API consumption using Postman, including request methods, parameters, authentication, and basic scripting.',
+    certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Postman%20API%20Fundamentals%20student%20expert%20certificate.pdf',
+    color: 'from-orange-500 to-orange-600',
+    logo: '/image.png',
   },
   {
     institution: 'Infosys Springboard',
@@ -44,14 +52,6 @@ const certifications = [
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Certificate.pdf',
     color: 'from-purple-500 to-violet-600',
     logo: '/best-coding-platforms.jpeg',
-  },
-  {
-    institution: 'Postman',
-    title: 'Postman API Fundamentals – Student Expert',
-    description: 'Hands-on certification demonstrating proficiency in API concepts and practical API consumption using Postman, including request methods, parameters, authentication, and basic scripting.',
-    certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Postman%20API%20Fundamentals%20student%20expert%20certificate.pdf',
-    color: 'from-orange-500 to-orange-600',
-    logo: '/image.png',
   }
 ];
 
