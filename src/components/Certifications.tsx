@@ -57,7 +57,7 @@ const certifications = [
   {
     institution: 'All Certificates',
     title: 'Overall Certificates Collection',
-    description: 'Complete collection of all certifications including DevOps, AWS, Docker, Ansible, Jenkins, Microsoft Learn, Android, Java, Python, SQL, Cybersecurity, and more.',
+    description: 'Complete collection of all certifications including Android, Java, Python, SQL, Networking, Project Management, and more.',
     certificateUrl: 'https://drive.google.com/drive/folders/16Bjp54039hBepoG1CvmkXDgOuK06f80m',
     color: 'from-indigo-500 to-purple-600',
     logo: '/achievement-certificates-in-a-frame-with-star-and-ribbon-cartoon-61218.jpg',
