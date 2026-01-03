@@ -17,11 +17,7 @@ import {
   FaNodeJs,
   FaShareAlt,
   FaGithub,
-  FaAws,
   FaDocker,
-  FaGlobe,
-  FaTools,
-  FaCode,
 } from "react-icons/fa";
 import {
   SiC,
@@ -29,9 +25,9 @@ import {
   SiSpringboot,
   SiMongodb,
   SiMysql,
-  SiKubernetes,
   SiFirebase,
-  SiJenkins,
+  SiEclipseide,
+  SiPostman,
 } from "react-icons/si";
 
 const skillCategories = [
@@ -75,10 +71,9 @@ const skillCategories = [
     skills: [
       { name: 'Git & GitHub', icon: FaGithub },
       { name: 'Docker', icon: FaDocker },
-      { name: 'Kubernetes', icon: SiKubernetes },
-      { name: 'Jenkins', icon: SiJenkins },
-      { name: 'AWS', icon: FaAws },
       { name: 'Firebase', icon: SiFirebase },
+      { name: 'Eclipse IDE', icon: SiEclipseide },
+      { name: 'Postman', icon: SiPostman },
     ],
   },
 ];
