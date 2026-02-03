@@ -23,31 +23,23 @@ const Hero = () => {
             <p className="text-primary font-mono text-sm sm:text-base mb-4 animate-fade-in-up opacity-0" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
               Hello, I'm
             </p>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               <span className="gradient-text gradient-text-animate">Hariharan R</span>
             </h1>
-            
+
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-4 animate-fade-in-up opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
               Full Stack Developer
             </h2>
-            
+
             <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
               Passionate about building scalable, secure, and user-friendly applications.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in-up opacity-0" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="btn-primary flex items-center gap-2"
-              >
-                <Send size={18} />
-                <span className="relative z-10">Hire Me</span>
-              </button>
-              
               <a
-                href="https://hariharan-r06-pdf.vercel.app/api/view-resume"
+                href="https://drive.google.com/file/d/1QhJ820mFJK2K4qz3cejC8tggKWcGisYe/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline flex items-center gap-2"
@@ -55,13 +47,13 @@ const Hero = () => {
                 <Download size={18} />
                 View Resume
               </a>
-              
+
               <button
                 onClick={() => scrollToSection('projects')}
-                className="px-6 py-3 text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+                className="btn-primary flex items-center gap-2"
               >
                 <FolderOpen size={18} />
-                View Projects
+                <span className="relative z-10">View Projects</span>
               </button>
             </div>
           </div>
@@ -74,17 +66,17 @@ const Hero = () => {
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                   {/* Profile Image */}
                   {!imageError ? (
-                    <img 
-                      src="/linkdin%20passport.png" 
-                      alt="Hariharan R" 
+                    <img
+                      src="/portfolio_image2.png"
+                      alt="Hariharan R"
                       className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
                       onError={() => setImageError(true)}
                     />
                   ) : (
                     <span className="text-6xl sm:text-7xl md:text-8xl font-bold gradient-text">HR</span>
                   )}
-                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>

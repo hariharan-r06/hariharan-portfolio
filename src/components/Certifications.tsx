@@ -9,7 +9,7 @@ const certifications = [
     description: 'Comprehensive training covering MongoDB fundamentals, data modeling, and database operations.',
     certificateUrl: 'https://hariharan-r06-pdf.vercel.app/api/view-mongodb',
     color: 'from-green-500 to-emerald-600',
-    logo: '/mongodb-atlas-google-cloud-partnership-nosql-databases-integrations-2 (1).jpg',
+    logo: '/mongodb-nedir-1 (2).png',
   },
   {
     institution: "Snowflake",
@@ -18,7 +18,7 @@ const certifications = [
     certificateUrl:
       "https://hariharan-r06-pdf.vercel.app/api/view-snowpro_certificate",
     color: "from-sky-300 to-blue-500",
-    logo: "/snowflake-logo.png"
+    logo: "/snowflake.png"
   },
   {
     institution: 'Celonis',
@@ -34,7 +34,7 @@ const certifications = [
     description: 'Hands-on certification demonstrating proficiency in API concepts and practical API consumption using Postman, including request methods, parameters, authentication, and basic scripting.',
     certificateUrl: 'https://hariharan-r06-pdf.vercel.app/api/view-postman_api_certificate',
     color: 'from-orange-500 to-orange-600',
-    logo: '/image.png',
+    logo: '/postman (1).jpg',
   },
   {
     institution: 'Infosys Springboard',
@@ -42,9 +42,9 @@ const certifications = [
     description: 'Java Programming , Networking and Web Technology , Android Developer Course , etc.',
     certificateUrl: 'https://hariharan-r06-pdf.vercel.app/api/view-infosys_springboard_cer',
     color: 'from-orange-500 to-amber-600',
-    logo: '/infosys.jpg',
+    logo: '/infosys_springboard (1).jpg',
   },
-  
+
 
   {
     institution: 'Coding Platform',
@@ -52,7 +52,7 @@ const certifications = [
     description: 'Recognition for excellence in competitive programming and algorithmic problem solving.',
     certificateUrl: 'https://qkinmnpr8gzqyfly.public.blob.vercel-storage.com/Certificate.pdf',
     color: 'from-purple-500 to-violet-600',
-    logo: '/best-coding-platforms.jpeg',
+    logo: '/coding_platform.png',
   },
   {
     institution: 'All Certificates',
@@ -60,7 +60,7 @@ const certifications = [
     description: 'Complete collection of all certifications including Android, Java, Python, SQL, Networking, Project Management, and more.',
     certificateUrl: 'https://drive.google.com/drive/folders/16Bjp54039hBepoG1CvmkXDgOuK06f80m',
     color: 'from-indigo-500 to-purple-600',
-    logo: '/achievement-certificates-in-a-frame-with-star-and-ribbon-cartoon-61218.jpg',
+    logo: '/All_files.jpg',
   },
 ];
 
@@ -116,13 +116,13 @@ const Certifications = () => {
 
               <div className="p-6">
                 {/* Logo/Icon */}
-                <div className="w-28 h-28 rounded-2xl bg-secondary/50 border border-border/50 flex items-center justify-center mb-4 overflow-hidden group-hover:scale-110 transition-transform duration-300 mx-auto">
-                  <img 
-                    src={cert.logo} 
+                <div className="w-32 h-auto rounded-1.5xl bg-secondary/50 border border-border/50 flex items-center justify-center mb-4 overflow-hidden group-hover:scale-120 transition-all duration-300 mx-auto">
+                  <img
+                    src={cert.logo}
                     alt={cert.institution}
-                    className="w-full h-full object-contain p-3"
-                    style={{ 
-                      maxWidth: '100%', 
+                    className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-110"
+                    style={{
+                      maxWidth: '100%',
                       maxHeight: '100%',
                       objectPosition: 'center',
                       display: 'block',

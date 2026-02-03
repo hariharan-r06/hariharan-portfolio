@@ -63,7 +63,7 @@ const About = () => {
                 I'm a pre-final (3rd) year Information Technology student at Sri Ramakrishna Engineering College, Coimbatore.
               </p>
               <p>
-                I specialize in building modern, scalable, and user-focused web applications using technologies like React, Java, Spring Boot, Node.js, and strong expertise in Java. I enjoy working across the full stack — from crafting clean, responsive user interfaces to designing secure, efficient backend systems.
+                I specialize in building modern, scalable, and user-focused web applications using technologies like React, Java, Spring Boot, Node.js, and strong expertise in Java. I enjoy working across the full stack from crafting clean, responsive user interfaces to designing secure, efficient backend systems.
               </p>
               <p>
                 Currently, I'm focused on Data Structures and Algorithms in Java and consistently solving problems. My projects often involve real-world problem solving, performance optimization, and applying best engineering practices.
